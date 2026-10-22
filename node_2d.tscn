@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://b8nv7t88581d7"]
 
+[ext_resource type="PackedScene" uid="uid://cd7dbisblseb4" path="res://Player.tscn" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://qauvaqprs6yt" path="res://27240-8-campfire.png" id="2_epypp"]
+
 [node name="Node2D" type="Node2D" unique_id=1346249321]
+y_sort_enabled = true
+
+[node name="Player" parent="." unique_id=97641247 instance=ExtResource("1_0e48y")]
+position = Vector2(731, 344)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=505285077]
+y_sort_enabled = true
+position = Vector2(552, 319.0001)
+scale = Vector2(0.04113324, 0.041133244)
+texture = ExtResource("2_epypp")
