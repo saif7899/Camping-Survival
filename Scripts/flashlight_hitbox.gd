@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var dps = 30
+@export var dps = 20
 
 func _physics_process(delta: float) -> void:
 	var bodies = get_overlapping_bodies()
