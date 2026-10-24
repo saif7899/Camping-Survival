@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://767us3wtmdvy"]
+
+[ext_resource type="Script" uid="uid://cgc52skpokd8x" path="res://basic_zombie.gd" id="1_8bu2s"]
+[ext_resource type="Texture2D" uid="uid://4th1mis27vuu" path="res://icon.svg" id="1_mvbjr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 53.33334
+
+[node name="Basic Zombie" type="CharacterBody2D" unique_id=2074410587 groups=["Zombie"]]
+light_mask = 7
+y_sort_enabled = true
+script = ExtResource("1_8bu2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=383094431]
+modulate = Color(0.15345433, 0.4224267, 3.85046e-07, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_mvbjr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341127214]
+position = Vector2(-3.8146973e-06, 3.8146973e-06)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CircleShape2D_g4v7s")
