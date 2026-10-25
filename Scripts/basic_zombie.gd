@@ -11,7 +11,11 @@ var campfire = null
 var attacktimer = 0
 @export var spawnCost = 1
 
+@export var value = 5 #how much money this drops
+
 @onready var agent: NavigationAgent2D = $NavigationAgent2D
+
+
 
 # FOR POLISH
 # vibarte when flashlight pointed
@@ -58,6 +62,7 @@ func TakeDamage(amount: float):
 		die()
 
 func die():
+	GameManager.AddMoney(value)
 	queue_free()
 	# death effects
 

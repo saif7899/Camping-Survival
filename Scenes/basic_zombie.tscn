@@ -18,7 +18,7 @@ modulate = Color(0.15345433, 0.4224267, 3.85046e-07, 1)
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("2_iypfd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341127214]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1341127214 groups=["Zombie"]]
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
 scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_g4v7s")

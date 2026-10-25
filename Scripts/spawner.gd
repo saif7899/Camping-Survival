@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 			SpawnZombie()
 
 func SpawnZombie():
-	if get_tree().get_nodes_in_group("zombies").size() >= maxZombies:
+	if get_tree().get_nodes_in_group("Zombie").size() >= maxZombies:
 		return
 	var zombie = zombieScene.pick_random().instantiate()
 	

@@ -19,6 +19,9 @@ metadata/_snap_enabled = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
 radius = 33.01515
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 35.014282
+
 [node name="Player" type="CharacterBody2D" unique_id=97641247]
 y_sort_enabled = true
 collision_mask = 3
@@ -63,3 +66,12 @@ texture = ExtResource("2_5ixxa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1246559440]
 shape = SubResource("CircleShape2D_xhfnw")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1503416631]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1787792845]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

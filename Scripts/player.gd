@@ -19,3 +19,8 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	$flashlight.look_at(get_global_mouse_position())
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Zombie"):
+		global_position = get_viewport_rect().size
+		targetPosition = global_position
